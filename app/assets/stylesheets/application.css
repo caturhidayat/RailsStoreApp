@@ -1,0 +1,145 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+/* ===================================
+   Base Application Styles - Minimalist
+   =================================== */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    min-height: 100vh;
+    color: #111;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: color 150ms ease;
+}
+
+nav a:hover {
+    color: #111;
+}
+
+nav a:first-child {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #111;
+    letter-spacing: -0.02em;
+}
+
+nav form {
+    margin-left: auto;
+}
+
+nav button {
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #666;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    cursor: pointer;
+    transition: all 150ms ease;
+    font-family: inherit;
+}
+
+nav button:hover {
+    border-color: #111;
+    color: #111;
+}
+
+/* Flash Messages */
+.notice,
+.alert {
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 0.875rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.notice:empty,
+.alert:empty {
+    display: none;
+}
+
+.notice {
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.alert {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* Links */
+a {
+    color: #111;
+    transition: opacity 150ms ease;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        padding: 0.875rem 1rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 0.8125rem;
+    }
+}
